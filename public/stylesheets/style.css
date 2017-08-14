@@ -19,6 +19,7 @@ a {
     width: 100%;
     z-index: 10000;
     height: 80px;
+    box-shadow: 2px 2px 5px darkslategray;
 }
 .top-menu a {
     text-decoration: none;
@@ -49,12 +50,21 @@ a {
 
 
 /* users.hbs section */
+.banner {
+    background-image: url('../images/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7;
+    height: 500px;
+    margin-top: 60px;
+}
 .welcome-message {
-    margin-top: 150px;
-    margin-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 70px;
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
+    text-shadow: 5px 5px 5px lavender;
 }
 .users-container {
     display: flex;

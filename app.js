@@ -13,7 +13,7 @@ var cookieParser = require('cookie-parser');
 // usually for forms
 var bodyParser = require('body-parser');
 
-
+// handlebars for using partials
 const expressHbs = require('express-handlebars');
 
 
