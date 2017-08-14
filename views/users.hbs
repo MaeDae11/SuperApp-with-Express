@@ -6,16 +6,18 @@
 </div>
 
 
-{{#each member}}
-    <div class="users">
-        <h2>{{surname}}, {{firstname}}</h2>
-        <p>Member Id: {{memid}}</p>
-        {{#if address}}
-        <p>Address: {{address}}</p>
-        {{/if}}
-        {{#if zipcode}}
-        <p>Zipcode: {{zipcode}}</p>
-        {{/if}}
-        <p>{{firstname}} joined The Swan House on {{joindate}}.</p>
-    </div>
-{{/each}}
+<div class="users-container">
+    {{#each member}}
+        <div class="users">
+            <h2>{{surname}}, {{firstname}}</h2>
+            <p>Member Id: {{memid}}</p>
+            {{#if address}}
+            <p>Address: {{address}}</p>
+            {{/if}}
+            {{#if zipcode}}
+            <p>Zipcode: {{zipcode}}</p>
+            {{/if}}
+            <p>{{firstname}} joined The Swan House on {{joindate}}.</p>
+        </div>
+    {{/each}}
+</div>

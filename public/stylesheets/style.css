@@ -1,28 +1,75 @@
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Lato', sans-serif; */
+
 body {
   padding: 0px;
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
 
-
+/* navigation bar for all pages */
 .navigation-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding-right: 30px;
-    background-color: lavender;
-    font-size: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    height: 80px;
 }
 .top-menu a {
     text-decoration: none;
     color: lightslategray;
     padding-right: 30px;
 }
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    padding-right: 40px;
+}
+.navigation-bar,
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lavender;
+    font-size: 16px;
+}
+.footer-container {
+    height: 200px;
+}
 
 
 
+
+
+
+
+/* users.hbs section */
+.welcome-message {
+    margin-top: 150px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+.users-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1024px;
+}
+.users {
+    max-width: 300px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.users:hover {
+    background: lightcyan;
+    cursor: pointer;
+}
