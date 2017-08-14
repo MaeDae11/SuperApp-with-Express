@@ -14,6 +14,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
+const expressHbs = require('express-handlebars');
+
+
 // these are the different files used for the webpage. must put in here and require it to then .use it
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -32,7 +35,8 @@ var app = express();
 //in our case its handlebars
 // set view to hbs (handlebars)
 // express needs to know how to talk to view engine
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
+app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}))
 app.set('view engine', 'hbs');
 
 
