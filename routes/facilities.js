@@ -5,9 +5,10 @@ const db = require('../db');
 
 /* GET home page. */
 // only put '/' because if put /facilities  we would technically have to call  /facilities/facilities
-router.get('/', function(req, res, next) {
+// :id is a route variable, now makes this a dynamic select statement dependant on the users route statement. becomes a thing of req.params
+router.get('/:id', function(req, res, next) {
     db.one(`
-        select * from cd.facilities where facid=7;
+        select * from cd.facilities where facid=${req.params.id};
     `).then( (result) => {
         // .then gets results of db.one after data comes back from database
         // how have res.render within this anonymous function?  SCOPE!
@@ -18,10 +19,7 @@ router.get('/', function(req, res, next) {
             membercost: result.membercost,
             guestcost: result.guestcost
         });
-    });
-
-
-    
+    });  
 });
 
 

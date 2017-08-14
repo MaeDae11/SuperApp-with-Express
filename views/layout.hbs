@@ -3,8 +3,25 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+    {{!-- reusable skeleton --}}
+     </head>
+    <body>
+        
+        <div class="navigation-bar">
+            <menu type="context" class="top-menu">
+                <span><a href="#">Home</a></span>
+                <span><a href="#">Contact</a></span>
+                <span><a href="#">About</a></span>
+                <span><a href="#">My Profile</a></span>
+            </menu>
+            <div class="logo">
+                <span>The Swan House</span>
+            </div>
+        </div>
+      {{!-- could use navbar here! --}}
+      {{!-- can create home.hbs - with this, in the template would specify layout: "home" --}}
+      {{!-- this is how other templates know where to go --}}
     {{{body}}}
+
   </body>
 </html>
