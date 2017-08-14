@@ -14,9 +14,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
-
+// these are the different files used for the webpage. must put in here and require it to then .use it
 var index = require('./routes/index');
 var users = require('./routes/users');
+var facilities = require('./routes/facilities');
 
 
 // creates express app itself
@@ -53,8 +54,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // more middleware
 // after setup, now have to show how to route files
+// index doesnt have a path. '/' is an empty route. makes index absolute path
 app.use('/', index);
 app.use('/users', users);
+app.use('/facilities', facilities);
 
 
 
