@@ -23,6 +23,7 @@ var users = require('./routes/users');
 var facilities = require('./routes/facilities');
 
 
+
 // creates express app itself
 var app = express();
 
@@ -62,6 +63,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/facilities', facilities);
+
 
 
 
